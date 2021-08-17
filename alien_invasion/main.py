@@ -1,7 +1,6 @@
-import sys
 import pygame
-from pygame import event
 from pipboy import Pipboy
+import game_functions as gf
 
 from settings import Settings
 
@@ -21,11 +20,9 @@ def run_game():
     pipboy.blitme()
 
     while True:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                sys.exit()
+        gf.check_events()
+        gf.update_screen()
 
-        pygame.display.flip()
 
 
 run_game()
