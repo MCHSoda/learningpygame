@@ -21,7 +21,7 @@ def run_game():
 
     while True:
         gf.check_events()
-        gf.update_screen()
+        gf.update_screen(ai_settings, screen, pipboy)
 
 
 
